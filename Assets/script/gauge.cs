@@ -36,10 +36,10 @@ public class gauge : MonoBehaviour
     {
         if (_up)
         {
-            if (_slider.value < 5f)
+            if (_slider.value < 30f)
             {
 
-                _slider.value += 0.1f;
+                _slider.value += 0.8f;
                 Debug.Log("add");
             }
             else
@@ -54,7 +54,7 @@ public class gauge : MonoBehaviour
             if (_slider.value > 0)
             {
                 Debug.Log("minus");
-                _slider.value -= 0.1f;
+                _slider.value -= 0.8f;
             }
             else
             {
