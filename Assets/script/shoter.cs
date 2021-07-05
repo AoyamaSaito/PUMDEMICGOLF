@@ -11,14 +11,14 @@ public class shoter : MonoBehaviour
     [SerializeField] GameObject[] _gameobject;
     [SerializeField] GameObject[] _gameobject2;
     [SerializeField] Transform m_muzzle = default;
-    [SerializeField] float m_Speed = 5f;
     [SerializeField] GameObject destroy;
     [SerializeField] GameObject destroy2;
     Rigidbody2D m_rb = default;
     Slider _slider;
-    float m_timer = 0;
-    float m_interval = 1.5f;
     CameraControl _cameraMove;
+    public float torque;
+    [SerializeField] float turn = 0;
+    [SerializeField] Vector3 m_center;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,9 @@ public class shoter : MonoBehaviour
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
         _cameraMove = _gameObject2.GetComponent <CameraControl>();
         m_rb = GetComponent<Rigidbody2D>();
+        m_rb.centerOfMass = m_center;
         _cameraMove.enabled = false;
+        SwitchToNear();
     }
 
     // Update is called once per frame
@@ -41,7 +43,6 @@ public class shoter : MonoBehaviour
             if (m_farVCam)
             {
                 m_farVCam.MoveToTopOfPrioritySubqueue();
-                Invoke("SwitchToNear", 2f);
             }
             m_rb.velocity = m_muzzle.transform.right.normalized * _slider.value;
             this.transform.rotation = m_muzzle.rotation;
@@ -49,6 +50,15 @@ public class shoter : MonoBehaviour
             Destroy(destroy);
             Destroy(destroy2);
             _cameraMove.enabled = true;
+            m_rb.AddTorque(turn * torque);
+        }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Invoke("SwitchToNear", 1f);
         }
     }
 

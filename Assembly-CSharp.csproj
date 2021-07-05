@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Assets\script\CameraControl.cs" />
     <Compile Include="Assets\script\Stop.cs" />
-    <Compile Include="Assets\script\TrackingObject.cs" />
     <Compile Include="Assets\script\TransformHead.cs" />
     <Compile Include="Assets\script\arrow.cs" />
     <Compile Include="Assets\script\camera.cs" />

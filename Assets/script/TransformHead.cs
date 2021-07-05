@@ -5,7 +5,8 @@ using UnityEngine;
 public class TransformHead : MonoBehaviour
 {
     Rigidbody2D m_rb;
-    // Start is called before the first frame update
+    public float torque;
+    [SerializeField]float turn = 0;
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
@@ -14,6 +15,6 @@ public class TransformHead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.right = m_rb.velocity;
+        m_rb.AddTorque(turn * torque );
     }
 }
