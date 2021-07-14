@@ -28,7 +28,6 @@ public class gauge : MonoBehaviour
         _up = true;
         _down = false;
         _shoter.enabled = false;
-        _cameraMove.enabled = false;
     }
 
     // Update is called once per frame

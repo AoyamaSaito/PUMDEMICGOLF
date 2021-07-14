@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class arrow : MonoBehaviour
 {   
@@ -15,6 +16,7 @@ public class arrow : MonoBehaviour
     [SerializeField] float _upCountRimit = 5f;
     [SerializeField] float _dwonCountRimit = 3f;
 
+    [SerializeField] CinemachineVirtualCameraBase m_nearVCam = default;
     camera _cameraMove;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,6 @@ public class arrow : MonoBehaviour
         GameObject _gameObject2 = GameObject.Find("MainCamera");
         _cameraMove = _gameObject2.GetComponent<camera>();
         _move = _gameObject.GetComponent<arrow>();
-        _cameraMove.enabled = false;
     }
 
     // Update is called once per frame
@@ -68,6 +69,11 @@ public class arrow : MonoBehaviour
         {
             Debug.Log("stop");
             _move.enabled = false;
+        }
+
+        if (m_nearVCam)
+        {
+            m_nearVCam.MoveToTopOfPrioritySubqueue();
         }
     }
 

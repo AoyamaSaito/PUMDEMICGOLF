@@ -27,6 +27,7 @@ public class Stop : MonoBehaviour
             Debug.Log("stop");
             Destroy(_move);
             _gauge.enabled = true;
+            this.enabled = false;
         }            
     }
 }

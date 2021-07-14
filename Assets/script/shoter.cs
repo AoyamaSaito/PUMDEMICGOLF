@@ -36,13 +36,13 @@ public class shoter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("shot");
             if (m_farVCam)
             {
-                m_farVCam.MoveToTopOfPrioritySubqueue();
+                //m_farVCam.MoveToTopOfPrioritySubqueue();
+                m_farVCam.Priority = 11;
             }
             m_rb.velocity = m_muzzle.transform.right.normalized * _slider.value;
             this.transform.rotation = m_muzzle.rotation;
@@ -58,7 +58,7 @@ public class shoter : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Invoke("SwitchToNear", 1f);
+            Invoke("SwitchToNear", 0.01f);
         }
     }
 
@@ -66,7 +66,8 @@ public class shoter : MonoBehaviour
     {
         if (m_nearVCam)
         {
-            m_nearVCam.MoveToTopOfPrioritySubqueue();
+            //m_nearVCam.MoveToTopOfPrioritySubqueue();
+            m_nearVCam.Priority = 12;
         }
     }
 }
