@@ -17,11 +17,10 @@ public class PlayerControler1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");  
-        float v = Input.GetAxisRaw("Vertical");     
-        Vector2 dir = new Vector2(h, v).normalized; 
-        m_rb.velocity = dir * m_Speed;
-        this.transform.up = dir;
-        
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
+            Vector2 dir = new Vector2(h, v).normalized;
+            m_rb.velocity = dir * m_Speed;
+            this.transform.up = dir;
     }
 }
