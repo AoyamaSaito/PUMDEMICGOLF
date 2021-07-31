@@ -5,7 +5,7 @@ using UnityEngine;
 public class TransformHead : MonoBehaviour
 {
     Rigidbody2D m_rb;
-    public float torque;
+    float torque;
     [SerializeField]float turn = 0;
     void Start()
     {
