@@ -34,10 +34,10 @@ public class LaserRayCast : MonoBehaviour
             RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Ray, kyori, m_PlayerLayer);
             if (hit2.collider)
             {
-
                 Debug.Log("hit");
             }
         }
+
         //Vector2 Ray = hit.point ;
         //Debug.DrawLine(origin, Ray);
         //RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Ray,kyori , m_PlayerLayer);

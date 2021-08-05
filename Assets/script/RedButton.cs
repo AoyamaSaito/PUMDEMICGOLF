@@ -5,15 +5,18 @@ using UnityEngine;
 public class RedButton : MonoBehaviour
 {
     Animator m_anime;
+    Animator m_bottunAnim;
 
     void Start()
     {
-        GameObject point = GameObject.Find("point");
-        m_anime = point.GetComponent<Animator>();
+        GameObject door = GameObject.Find("door");
+        m_anime = door.GetComponent<Animator>();
+        m_bottunAnim = GetComponent<Animator>();
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("REDBUTTON");
         m_anime.Play("VibrationAnime");
+        m_bottunAnim.Play("BottunAnim");
     }
 }
