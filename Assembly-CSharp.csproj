@@ -81,6 +81,7 @@
     <Compile Include="Assets\Script\RedButton.cs" />
     <Compile Include="Assets\Script\SceneLoader.cs" />
     <Compile Include="Assets\Script\ScoreManager.cs" />
+    <Compile Include="Assets\Script\StageIn.cs" />
     <Compile Include="Assets\Script\Stop.cs" />
     <Compile Include="Assets\Script\TransformHead.cs" />
     <Compile Include="Assets\Script\arrow.cs" />
