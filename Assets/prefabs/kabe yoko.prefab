@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 8150138410362320620, guid: d8b53eced7854f24590fb46fb2dacfb8,
         type: 3}
       propertyPath: m_Name
-      value: kabe (4)
+      value: kabe yoko
       objectReference: {fileID: 0}
     - target: {fileID: 8150138410362320626, guid: d8b53eced7854f24590fb46fb2dacfb8,
         type: 3}
