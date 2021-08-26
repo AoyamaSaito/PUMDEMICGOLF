@@ -30,13 +30,16 @@ public class siminclear : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Fade");
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Fade");
             if (FadeAnim)
             {
-            FadeAnim.Play("FadeAnim");
-            Debug.Log("FadeAnim");
+                FadeAnim.Play("FadeAnim");
+                Debug.Log("FadeAnim");
             }
-        StartCoroutine(ChangeSprite());
+            StartCoroutine(ChangeSprite());
+        }
     }
     IEnumerator ChangeSprite()
     {

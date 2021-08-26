@@ -22,11 +22,10 @@ public class PatrolEnemy : MonoBehaviour
     {
         float distance = Vector2.Distance(this.transform.position, m_targets[n].position);
 
-        if (distance > m_stopDistance)  // ターゲットに到達するまで処理する
+        if (distance > m_stopDistance) 
         {
             dir = (m_targets[n].transform.position - this.transform.position).normalized * m_moveSpeed;
             m_rb.velocity = dir;
-            //this.transform.Translate(dir * Time.deltaTime);
             this.transform.up = dir;
         }
         else
@@ -35,5 +34,9 @@ public class PatrolEnemy : MonoBehaviour
             n = (n + 1) % m_targets.Length;
 
         }
+    }
+    public void Stop()
+    {
+        dir =default ; 
     }
 }

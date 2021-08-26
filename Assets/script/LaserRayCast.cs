@@ -40,9 +40,9 @@ public class LaserRayCast : MonoBehaviour
             RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Ray, kyori, m_PlayerLayer);
             if (hit2.collider)
             {
+                UE.Invoke();
                 Instantiate(shitai, tf.transform.position, Quaternion.identity);
                 Destroy(gameObject1);
-                UE.Invoke();
                 StartCoroutine(SecondsCourutine());
                 Debug.Log("hit");
             }
