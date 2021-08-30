@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class siminclear : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class siminclear : MonoBehaviour
     Animator Elevator2;
     [SerializeField] GameObject gameObject1;
     GameObject gameObject3;
+    [SerializeField] UnityEvent UE;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class siminclear : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            UE.Invoke();
             Debug.Log("Fade");
             if (FadeAnim)
             {

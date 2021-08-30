@@ -37,6 +37,6 @@ public class PatrolEnemy : MonoBehaviour
     }
     public void Stop()
     {
-        dir =default ; 
+        m_rb.velocity = default;
     }
 }

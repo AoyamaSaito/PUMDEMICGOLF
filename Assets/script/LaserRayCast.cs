@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class LaserRayCast : MonoBehaviour
 {
-    [SerializeField] Vector2 distance = Vector2.zero;
+    Vector2 distance = Vector2.zero;
     [SerializeField] LayerMask m_PlayerLayer = 0;
     [SerializeField] LayerMask m_WallLayer = 0;
+    [SerializeField] LayerMask m_castLayer = 0;
     [SerializeField] float m_ray = 20;
     [SerializeField] GameObject shitai;
     float kyori;
@@ -29,25 +30,44 @@ public class LaserRayCast : MonoBehaviour
     {
         pe = GetComponent<PatrolEnemy>();
 
-        Vector2 m_Ray = pe.dir * 50;
-        Vector2 origin = this.transform.localPosition;
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, m_Ray, m_ray, m_WallLayer);
-        if(hit.collider)
+        RaycastHit2D hit;
+        Vector2 start = this.transform.position;
+        Vector2 end = this.transform.position + this.transform.up * 100;
+        hit = Physics2D.Linecast(start, end, m_castLayer);
+        Debug.DrawLine(start, end);
+
+        if (hit)
         {
-            kyori = hit.distance;
-            Vector2 Ray = hit.point;
-            Debug.DrawLine(origin, Ray);
-            RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Ray, kyori, m_PlayerLayer);
-            if (hit2.collider)
-            {
-                UE.Invoke();
-                Instantiate(shitai, tf.transform.position, Quaternion.identity);
-                Destroy(gameObject1);
-                StartCoroutine(SecondsCourutine());
-                Debug.Log("hit");
-            }
+            Debug.Log($"{hit.collider.name} に当たった");
         }
 
+        if(hit.collider.name == "Player")
+        {
+            UE.Invoke();
+                    Instantiate(shitai, tf.transform.position, Quaternion.identity);
+                    Destroy(gameObject1);
+                    StartCoroutine(SecondsCourutine());
+                    Debug.Log("hit");
+        }
+
+        //Vector2 m_Ray = pe.dir * 50;
+        //Vector2 origin = this.transform.localPosition;
+        //RaycastHit2D hit = Physics2D.Raycast(this.transform.position, m_Ray, m_ray, m_WallLayer);
+        //if(hit.collider)
+        //{
+        //    kyori = hit.distance;
+        //    Vector2 Ray = hit.point;
+        //    Debug.DrawLine(origin, Ray);
+        //    RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Ray, kyori, m_PlayerLayer);
+        //    if (hit2.collider)
+        //    {
+        //        UE.Invoke();
+        //        Instantiate(shitai, tf.transform.position, Quaternion.identity);
+        //        Destroy(gameObject1);
+        //        StartCoroutine(SecondsCourutine());
+        //        Debug.Log("hit");
+        //    }
+        //}
 
         IEnumerator SecondsCourutine()
         {
