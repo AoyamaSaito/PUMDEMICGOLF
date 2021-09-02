@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoneScene.unity
     guid: f40aea534b9135d41854be3c972912ad
+  - enabled: 1
+    path: Assets/Scenes/MainScene3.unity
+    guid: bbf84e59796b6bc47a2bb15a8bef6099
+  - enabled: 1
+    path: Assets/Scenes/MainScene2.unity
+    guid: 56862ef93b930c349a4fe8da1f355cdf
   m_configObjects: {}

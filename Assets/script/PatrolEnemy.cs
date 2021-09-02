@@ -9,7 +9,7 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] float m_moveSpeed = 0f;
 
     public Vector3 dir;
-
+    bool stopBool = true;
     int n = 0;
     Rigidbody2D m_rb = default;
     void Start()
@@ -22,21 +22,28 @@ public class PatrolEnemy : MonoBehaviour
     {
         float distance = Vector2.Distance(this.transform.position, m_targets[n].position);
 
-        if (distance > m_stopDistance) 
+        if (stopBool)
         {
-            dir = (m_targets[n].transform.position - this.transform.position).normalized * m_moveSpeed;
-            m_rb.velocity = dir;
-            this.transform.up = dir;
+            if (distance > m_stopDistance)
+            {
+                dir = (m_targets[n].transform.position - this.transform.position).normalized * m_moveSpeed;
+                m_rb.velocity = dir;
+                this.transform.up = dir;
+            }
+            else
+            {
+
+                n = (n + 1) % m_targets.Length;
+
+            }
         }
         else
         {
-
-            n = (n + 1) % m_targets.Length;
-
+            m_rb.velocity = Vector2.zero ;
         }
     }
     public void Stop()
     {
-        m_rb.velocity = default;
+        stopBool = false;
     }
 }

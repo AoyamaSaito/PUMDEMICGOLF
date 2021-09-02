@@ -73,6 +73,7 @@
     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
+    <Compile Include="Assets\Script\FreeLaserRayCast.cs" />
     <Compile Include="Assets\Script\LaserRay.cs" />
     <Compile Include="Assets\Script\LaserRayCast.cs" />
     <Compile Include="Assets\Script\PatrolEnemy.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets\Script\ScoreManager.cs" />
     <Compile Include="Assets\Script\StageIn.cs" />
     <Compile Include="Assets\Script\Stop.cs" />
-    <Compile Include="Assets\Script\TransformHead.cs" />
     <Compile Include="Assets\Script\arrow.cs" />
     <Compile Include="Assets\Script\bonemove.cs" />
     <Compile Include="Assets\Script\camera.cs" />
