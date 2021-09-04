@@ -73,9 +73,12 @@
     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
+    <Compile Include="Assets\Script\ColliderEnterUE.cs" />
+    <Compile Include="Assets\Script\ColliderExitUE.cs" />
     <Compile Include="Assets\Script\FreeLaserRayCast.cs" />
     <Compile Include="Assets\Script\LaserRay.cs" />
     <Compile Include="Assets\Script\LaserRayCast.cs" />
+    <Compile Include="Assets\Script\OnOffObject.cs" />
     <Compile Include="Assets\Script\PatrolEnemy.cs" />
     <Compile Include="Assets\Script\PlayerController2D.cs" />
     <Compile Include="Assets\Script\PlayerPrefsPatternLoad.cs" />

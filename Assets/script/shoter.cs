@@ -41,7 +41,6 @@ public class shoter : MonoBehaviour
             Debug.Log("shot");
             if (m_farVCam)
             {
-                //m_farVCam.MoveToTopOfPrioritySubqueue();
                 m_farVCam.Priority = 11;
             }
             m_rb.velocity = m_muzzle.transform.right.normalized * _slider.value;
