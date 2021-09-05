@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class StageIn : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class StageIn : MonoBehaviour
     [SerializeField] CinemachineVirtualCameraBase m_billCam = default;
     [SerializeField] string loadScene;
     Animator FadeAnim;
+    [SerializeField] UnityEvent BatAnim;
     void Start()
     {
         GameObject gameObject = GameObject.Find("Fade");
@@ -30,6 +32,7 @@ public class StageIn : MonoBehaviour
             Debug.Log("StageIn");
             m_billCam.Priority = 11;
             StartCoroutine(InStage());
+            
         }
     }
 
@@ -43,7 +46,9 @@ public class StageIn : MonoBehaviour
 
     IEnumerator InStage()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
+        BatAnim.Invoke();
+        yield return new WaitForSeconds(3f);
         FadeAnim.Play("FadeAnim");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(loadScene);

@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene1.unity
     guid: 7094fb61c401d904c93185b215637358
   - enabled: 1
-    path: Assets/Scenes/BoneScene.unity
+    path: Assets/Scenes/MiddleStage.unity
     guid: f40aea534b9135d41854be3c972912ad
   - enabled: 1
     path: Assets/Scenes/MainScene3.unity
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene2.unity
     guid: 56862ef93b930c349a4fe8da1f355cdf
+  - enabled: 1
+    path: Assets/Scenes/MiddleStage 1.unity
+    guid: 75723747de2bd704ba1f721692ee3ee2
+  - enabled: 1
+    path: Assets/Scenes/MiddleStage 2.unity
+    guid: 962c33f235710744285e11ccbccc2d23
   m_configObjects: {}

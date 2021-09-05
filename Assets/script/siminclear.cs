@@ -35,11 +35,9 @@ public class siminclear : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             UE.Invoke();
-            Debug.Log("Fade");
             if (FadeAnim)
             {
                 FadeAnim.Play("FadeAnim");
-                Debug.Log("FadeAnim");
             }
             StartCoroutine(ChangeSprite());
         }

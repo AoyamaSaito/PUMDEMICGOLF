@@ -40,7 +40,6 @@ public class FreeLaserRayCast : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         UE2.Invoke();
-        Debug.Log("courutine");
     }
 
     public void StopLay()
@@ -65,7 +64,6 @@ public class FreeLaserRayCast : MonoBehaviour
                 Instantiate(shitai, tf.transform.position, Quaternion.identity);
                 Destroy(gameObject1);
                 StartCoroutine(SecondsCourutine());
-                Debug.Log("hit");
             }
         }
     }

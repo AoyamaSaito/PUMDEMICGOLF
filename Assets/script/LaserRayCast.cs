@@ -36,10 +36,6 @@ public class LaserRayCast : MonoBehaviour
             Vector2 end = this.transform.position + this.transform.up * 100;
             hit = Physics2D.Linecast(start, end, m_castLayer);
             Debug.DrawLine(start, end);
-            if (hit)
-            {
-                Debug.Log($"{hit.collider.name} に当たった");
-            }
 
             if (hit.collider.name == "Player")
             {
@@ -47,7 +43,6 @@ public class LaserRayCast : MonoBehaviour
                 Instantiate(shitai, tf.transform.position, Quaternion.identity);
                 Destroy(gameObject1);
                 StartCoroutine(SecondsCourutine());
-                Debug.Log("hit");
             }
         }
         else StopLay(); 

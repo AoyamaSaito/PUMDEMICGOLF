@@ -15,7 +15,6 @@ public class RedButton : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("REDBUTTON");
         m_anime.Play("VibrationAnime");
         m_bottunAnim.Play("BottunAnim");
     }
