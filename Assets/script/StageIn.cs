@@ -29,7 +29,6 @@ public class StageIn : MonoBehaviour
     {
         if (collision.gameObject.tag == "StageIn")
         {
-            Debug.Log("StageIn");
             m_billCam.Priority = 11;
             StartCoroutine(InStage());
             
