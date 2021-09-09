@@ -90,6 +90,7 @@
     <Compile Include="Assets\Script\ScoreManager.cs" />
     <Compile Include="Assets\Script\StageChange.cs" />
     <Compile Include="Assets\Script\StageChange1.cs" />
+    <Compile Include="Assets\Script\StageChange2.cs" />
     <Compile Include="Assets\Script\StageIn.cs" />
     <Compile Include="Assets\Script\Stop.cs" />
     <Compile Include="Assets\Script\arrow.cs" />
