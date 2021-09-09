@@ -6,6 +6,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] float m_rotateSpeed = 1.5f;
     Rigidbody2D m_rb = default;
     Vector3 m_inputDirection = default;
+    pause pause;
 
     void Start()
     {
@@ -23,5 +24,6 @@ public class PlayerController2D : MonoBehaviour
     private void FixedUpdate()
     {
         m_rb.velocity = m_inputDirection * m_movePower;
+        pause.Pause();
     }
 }
