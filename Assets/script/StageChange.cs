@@ -8,10 +8,12 @@ public class StageChange : MonoBehaviour
 {
     [SerializeField] string loadScene;
     Animator FadeAnim;
+    GameObject gameObject;
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject gameObject = GameObject.Find("Fade");
+        gameObject = GameObject.Find("Fade");
         FadeAnim = gameObject.GetComponent<Animator>();
     }
 
@@ -25,6 +27,8 @@ public class StageChange : MonoBehaviour
     }
     IEnumerator InStage()
     {
+        yield return new WaitForEndOfFrame();
+        gameObject.transform.SetAsLastSibling();
         yield return new WaitForSeconds(0.1f);
         FadeAnim.Play("FadeAnim");
         yield return new WaitForSeconds(1.5f);
@@ -34,5 +38,6 @@ public class StageChange : MonoBehaviour
     public void StageStart()
     {
         StartCoroutine(InStage());
+        Debug.Log("押された");
     }
 }
