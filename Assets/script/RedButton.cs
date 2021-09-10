@@ -6,6 +6,7 @@ public class RedButton : MonoBehaviour
 {
     Animator m_anime;
     Animator m_bottunAnim;
+    [SerializeField] AudioSource audio;
 
     void Start()
     {
@@ -17,5 +18,6 @@ public class RedButton : MonoBehaviour
     {
         m_anime.Play("VibrationAnime");
         m_bottunAnim.Play("BottunAnim");
+        audio.Play();
     }
 }

@@ -65,13 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayerPrefsPatternSave.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Demo\DemoScript.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Demo\DemoScript2D.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Prefab\BaseRainScript.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Prefab\RainCollision.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Prefab\RainScript.cs" />
+    <Compile Include="Assets\Scenes\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\ColliderEnterUE.cs" />
     <Compile Include="Assets\Script\ColliderExitUE.cs" />
@@ -101,8 +101,8 @@
     <Compile Include="Assets\Script\shoter.cs" />
     <Compile Include="Assets\Script\siminclear.cs" />
     <Compile Include="Assets\Script\test.cs" />
-    <None Include="Assets\RainMaker\Readme.txt" />
-    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\Scenes\RainMaker\Readme.txt" />
+    <None Include="Assets\Scenes\RainMaker\Prefab\RainShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
