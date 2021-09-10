@@ -92,6 +92,7 @@
     <Compile Include="Assets\Script\StageChange1.cs" />
     <Compile Include="Assets\Script\StageChange2.cs" />
     <Compile Include="Assets\Script\StageIn.cs" />
+    <Compile Include="Assets\Script\StageIn1.cs" />
     <Compile Include="Assets\Script\Stop.cs" />
     <Compile Include="Assets\Script\arrow.cs" />
     <Compile Include="Assets\Script\bonemove.cs" />
@@ -101,8 +102,10 @@
     <Compile Include="Assets\Script\shoter.cs" />
     <Compile Include="Assets\Script\siminclear.cs" />
     <Compile Include="Assets\Script\test.cs" />
+    <None Include="Assets\Font\Amanatsu\Amanatsu\readme.txt" />
     <None Include="Assets\Scenes\RainMaker\Readme.txt" />
     <None Include="Assets\Scenes\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\Font\sjis_sp_setofont_v_6_20\sjis_sp_setofont\readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

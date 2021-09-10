@@ -15,6 +15,7 @@ public class StageChange1 : MonoBehaviour
     {
         gameObject = GameObject.Find("Fade");
         FadeAnim = gameObject.GetComponent<Animator>();
+        StartCoroutine(FirstSibling());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +34,12 @@ public class StageChange1 : MonoBehaviour
         FadeAnim.Play("FadeAnim1");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(loadScene);
+    }
+
+    IEnumerator FirstSibling()
+    {
+        yield return new WaitForSeconds(3f);
+        gameObject.transform.SetAsFirstSibling();
     }
 
     public void StageStart()

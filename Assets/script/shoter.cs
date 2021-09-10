@@ -19,6 +19,7 @@ public class shoter : MonoBehaviour
     public float torque;
     [SerializeField] float turn = 0;
     [SerializeField] Vector3 m_center;
+    AudioSource As;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class shoter : MonoBehaviour
         _cameraMove = _gameObject2.GetComponent <CameraControl>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.centerOfMass = m_center;
+        As = GetComponent<AudioSource>();
         _cameraMove.enabled = false;
         SwitchToNear();
     }
@@ -48,6 +50,7 @@ public class shoter : MonoBehaviour
             this.enabled = false;
             Destroy(destroy);
             Destroy(destroy2);
+            As.Play();
             _cameraMove.enabled = true;
             m_rb.AddTorque(turn * torque);
         }

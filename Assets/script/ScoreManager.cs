@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         
-        distance = m_zombihead.position.x- m_Firstposition.position.x;
+        distance = m_zombihead.position.x- m_Firstposition.position.x - 1;
         m_ScoreText.text = "キョリ : " + (int)distance;
     }
 

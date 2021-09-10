@@ -35,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GolfScene.unity
     guid: 439c15f55cb3b15468b1f00a394c078f
-  - enabled: 1
-    path: Assets/Scenes/GolfNameInput.unity
-    guid: ef15dba74f01cd940be44820c8a5a642
   m_configObjects: {}
