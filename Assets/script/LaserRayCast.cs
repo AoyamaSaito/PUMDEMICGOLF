@@ -5,14 +5,8 @@ using UnityEngine.Events;
 
 public class LaserRayCast : MonoBehaviour
 {
-    Vector2 distance = Vector2.zero;
-    [SerializeField] LayerMask m_PlayerLayer = 0;
-    [SerializeField] LayerMask m_WallLayer = 0;
     [SerializeField] LayerMask m_castLayer = 0;
     [SerializeField] GameObject shitai;
-    float kyori;
-    PatrolEnemy pe;
-    PlayerController2D PC2D;
     Transform tf;
     GameObject gameObject1;
     [SerializeField] UnityEvent UE;
@@ -28,7 +22,6 @@ public class LaserRayCast : MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
-        pe = GetComponent<PatrolEnemy>();
         if (stopLay)
         {
             RaycastHit2D hit;
